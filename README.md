@@ -13,7 +13,7 @@ laracasts/flash, Tailwind CSS 4, Sentry SDK для коллектора ошиб
 
 ## Требования
 
-- PHP 8.3+, Composer
+- PHP 8.4+, Composer
 - Node.js 20+
 - SQLite (по умолчанию) или PostgreSQL
 
