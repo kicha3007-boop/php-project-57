@@ -1,15 +1,32 @@
 PORT ?= 8000
 
-setup:
+setup: install env db build
+
+install:
 	composer install
-	cp -n .env.example .env || true
-	php artisan key:generate
+	npm ci
+
+env:
+	[ -f .env ] || cp .env.example .env
+	php artisan key:generate --force
+
+db:
 	touch database/database.sqlite
 	php artisan migrate --force --seed
-	npm ci
+
+build:
 	npm run build
 
 start:
 	php artisan serve --host 0.0.0.0 --port $(PORT)
 
-.PHONY: setup start
+lint:
+	composer exec --verbose phpcs -- --standard=PSR12 app routes tests database
+
+lint-fix:
+	composer exec --verbose phpcbf -- --standard=PSR12 app routes tests database
+
+test:
+	php artisan test
+
+.PHONY: setup install env db build start lint lint-fix test

@@ -1,0 +1,16 @@
+{
+    "Name": "Имя",
+    "Email": "Email",
+    "Password": "Пароль",
+    "Confirm Password": "Подтверждение",
+    "Remember me": "Запомнить меня",
+    "Forgot your password?": "Забыли пароль?",
+    "Already registered?": "Уже зарегистрированы?",
+    "Register": "Зарегистрировать",
+    "Log in": "Войти",
+    "Email Password Reset Link": "Отправить ссылку для сброса пароля",
+    "Reset Password": "Сбросить пароль",
+    "Confirm": "Подтвердить",
+    "Resend Verification Email": "Отправить письмо ещё раз",
+    "Log Out": "Выход"
+}
